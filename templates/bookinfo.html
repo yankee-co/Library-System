@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Book info</title>
+    <style media="screen">
+      table{
+        border-spacing:0px;
+        width:130px;
+      }
+      th{
+        height:50px;
+        background-color:rgb(230, 37, 213);
+        border: 1px solid black;
+        padding: 0px 7px 0px 7px;
+      }
+      td{
+        border: 1px solid black;
+        padding: 7px;
+
+      }
+      li{
+        padding:0px;
+        margin:5px;
+      }
+      ul{
+        padding-left: 20px;
+        margin: 0px;
+      }
+      .red-colored{
+        background-color:red;
+        text-align:center;
+        color:white;
+        vertical-align:top;
+      }
+      #year{
+        background-color:silver;
+        text-align:center;
+        vertical-align:top;
+      }
+      .silvered{
+        background-color:silver;
+      }
+      #green_td{
+        background-color:green;
+      }
+      #colored_ul_text{
+        color:rgb(184, 255, 0);
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <th>Книга</th>
+        <th>Авторы</th>
+        <th>Год выпуска</th>
+        <th>Жанры</th>
+        <th>Кол-во читающих</th>
+        <th>Кол-во прочитавших</th>
+      </tr>
+
+      <!--
+      booktr = {
+                'book_title': book_title,
+                'authors' : authors,
+                'year': year,
+                'genres': genres,
+                'orders': orders,
+            }
+      -->
+
+      {% for booktr in book_info_list %}
+      <tr>
+        <td class = 'silvered'>{{booktr.book_title}}</td>
+        <td class = 'silvered'>
+          <ul>
+          {% for author in booktr.authors %}
+            <li>{{author}}</li>
+          {% endfor %}
+          </ul>
+        </td>
+        <td id = 'year'>{{booktr.year}}</td>
+        <td id = 'green_td'>
+          <ul id = 'colored_ul_text'>
+            {% for genre in booktr.genres %}
+            <li>{{genre}}</li>
+            {% endfor %}
+          </ul>
+        </td>
+        <td class = 'red-colored'>{{booktr.orders_stat.processing}}</td>
+        <td class = 'red-colored'>{{booktr.orders_stat.finished}}</td>
+      </tr>
+      {% endfor %}
+    </table>
+  </body>
+</html>

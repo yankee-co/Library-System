@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Numbers Page</title>
+    <style media="screen">
+      table, tr, td{
+        border : 1px solid green;
+        background-color:lightgrey;
+        font-weight:bold;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <td>Number</td>
+        <td>Square</td>
+      </tr>
+
+      {% for obj in values_list %}
+      <tr>
+        <td>{{obj.value}}</td>
+        <td>{{obj.square}}</td>
+      </tr>
+      {% endfor %}
+
+    </table>
+  </body>
+</html>
