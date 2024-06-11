@@ -1,4 +1,4 @@
-**Practice task training courses**
+**Practice task (web app) from training courses**
 
 Generally its library system where we have:
 
