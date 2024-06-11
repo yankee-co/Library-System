@@ -1,8 +1,8 @@
 **Practice task (web app) from training courses**
 
-Generally its library system where we have:
+Generally its library system made with Python Django REST Framework where we have:
 
-System time and date:
+System time and date on starting page:
 
 ![image](https://github.com/yankee-co/Library-System/assets/72886859/158a659a-80c8-41ea-89f2-5b8f0fc6ef19)
 
