@@ -1,4 +1,4 @@
-![image](https://github.com/yankee-co/Library-System/assets/72886859/00661a7b-5dfb-4bdd-8b6a-c1bc84afafc2)**Practice task training courses**
+**Practice task training courses**
 
 Generally its library system where we have:
 
